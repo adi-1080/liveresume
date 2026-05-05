@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: resumelive-backend
+    runtime: node
+    buildCommand: npm install -g bun && bun install && bunx prisma generate
+    startCommand: bun run src/index.ts
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
