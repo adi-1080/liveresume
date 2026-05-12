@@ -23,7 +23,7 @@ export const loginHandler = async ({ body, jwt, set }: any) => {
         return {
             sucess: true,
             token: token,
-            user: { username: user.username }
+            user: { username: user.username, userId: user.id.toString() }
         };
     }catch(error: any){
         set.status = 401;

@@ -7,4 +7,4 @@ export const app = new Elysia()
     .use(cors())
     .get("/", () => "Resume API is running securely")
     .use(resumeRoutes)
-    .use(authRoutes)
+    .use(authRoutes);
